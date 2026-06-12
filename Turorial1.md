@@ -44,12 +44,18 @@ module load netcdf-fortran netcdf-c hdf5 mpi fortran_compiler
 The exact name and version of each module is computer dependent. To find out what is already installed, you can run `module avail` and then `module load <YOUR_MODULES>`.
 
 **Build the arch file:**
+
+You have the option to either use your computer specific arch file or if you do have have this reference in place, you can run the auto arch file build
+
+*Option 1:* Use an existing arch file
+
+Add your arch file (`arch/arch-MY_COMPUTER.fcm`) under `<YOURNEMODIRECTORY>/arch` and set up the correct path for netcdf, HDF5 and XIOS (%NCDF_HOME, %HDF5_HOME and %XIOS_HOME). Examples are available in the directory `arch`.
+
+*Option 2:* Build an auto arch
 ```
 cd arch/
 ./build_arch-auto.sh --xios_prefix <YOURXIOSDIRECTORY>
 ```
-
-After successfully downloading, add your arch file (`arch/arch-MY_COMPUTER.fcm`) under `<YOURNEMODIRECTORY>/arch` and set up the correct path for netcdf, HDF5 and XIOS (%NCDF_HOME, %HDF5_HOME and %XIOS_HOME). Examples are available in the directory `arch`
 
 **Compile NEMO:**
 Now, you can start compiling the configuration based on the reference configuration GYRE, as we use XIOS3 the keys in the compilation need to be changed. The new configuration is called ‘GYRE_DEMO’.
