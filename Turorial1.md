@@ -52,10 +52,10 @@ cd arch/
 After successfully downloading, add your arch file (`arch/arch-MY_COMPUTER.fcm`) under `<YOURNEMODIRECTORY>/arch` and set up the correct path for netcdf, HDF5 and XIOS (%NCDF_HOME, %HDF5_HOME and %XIOS_HOME). Examples are available in the directory `arch`
 
 **Compile NEMO:**
-Now, you can start compiling the configuration based on the reference configuration GYRE, as we use XIOS3 the keys in the compilation need to be changed. The new configuration is called ‘MY_GYRE’.
-To compile 'MY_GYRE' run the following line (ifort_SPIRIT is the used arch file):
+Now, you can start compiling the configuration based on the reference configuration GYRE, as we use XIOS3 the keys in the compilation need to be changed. The new configuration is called ‘GYRE_DEMO’.
+To compile 'GYRE_DEMO' run the following line (ifort_SPIRIT is the used arch file):
 
-`./makenemo -m MY_COMPUTER -r GYRE_PISCES -n MY_GYRE -j 8 --add_key key_xios3`
+`./makenemo -m MY_COMPUTER -r GYRE_PISCES -n GYRE_DEMO -j 8 --add_key key_xios3`
 
 Now the configuration is compiled.
 
@@ -63,7 +63,7 @@ Now the configuration is compiled.
 
 **Go in your configuration directory**
 ```
-cd cfgs/MY_GYRE/EXP00
+cd cfgs/GYRE_DEMO/EXP00
 ```
 
 **Update your iodef.xml for XIOS3:**
