@@ -1,4 +1,4 @@
-# Tutorial 1 - Install, Compile and Run GYRE in version 5.0.2 with XIOS3
+# Tutorial 0 - Install, Compile and Run GYRE in version 5.0.2 with XIOS3
 
 ## 1. Prerequisities
 - Access to an HPC with at least 5 cores available
