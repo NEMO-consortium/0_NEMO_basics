@@ -57,6 +57,8 @@ cd arch/
 ./build_arch-auto.sh --xios_prefix <YOURXIOSDIRECTORY>
 ```
 
+If you use the auto build option, `MY_COMPUTER` is `auto`.
+
 **Compile NEMO:**
 Now, you can start compiling the configuration based on the reference configuration GYRE, as we use XIOS3 the keys in the compilation need to be changed. The new configuration is called ‘GYRE_DEMO’.
 To compile 'GYRE_DEMO' run the following line (ifort_SPIRIT is the used arch file):
