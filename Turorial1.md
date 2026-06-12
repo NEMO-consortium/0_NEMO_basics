@@ -22,13 +22,13 @@ Setup your arch files (one for the environment (.env), another for the compiler 
 
 `./make_xios --arch MY_COMPUTER --full --prod --job 8`
 
-- Now cd .. back to your workdir
+cd .. back to your workdir
 
 XIOS3 is now compiled
 
 ### 2.2 Install and compile NEMO version 5.0.2
 
-**Download NEMO version 5.0.2** by:
+**Download NEMO version 5.0.2:**
 
 `git clone --branch 5.0.2 https://forge.nemo-ocean.eu/nemo/nemo.git <YOURNEMODIRECTORY>`
 
@@ -36,15 +36,14 @@ and go in:
 
 `cd <YOURNEMODIRECTORY>`
 
-**Build your arch file**:
-
-- 1: load the environement (similar to the one used for XIOS):
+**Build your arch file**
+load the environement (similar to the one used for XIOS):
 ```
 module load netcdf-fortran netcdf-c hdf5 mpi fortran_compiler
 ```
 The exact name and version of each module is computer dependent. To find out what is already installed, you can run `module avail` and then `module load <YOUR_MODULES>`.
 
-- 2: build the arch file:
+**Build the arch file:**
 ```
 cd arch/
 ./build_arch-auto.sh --xios_prefix <YOURXIOSDIRECTORY>
@@ -52,8 +51,7 @@ cd arch/
 
 After successfully downloading, add your arch file (`arch/arch-MY_COMPUTER.fcm`) under `<YOURNEMODIRECTORY>/arch` and set up the correct path for netcdf, HDF5 and XIOS (%NCDF_HOME, %HDF5_HOME and %XIOS_HOME). Examples are available in the directory `arch`
 
-**compile NEMO**:
-
+**Compile NEMO:**
 Now, you can start compiling the configuration based on the reference configuration GYRE, as we use XIOS3 the keys in the compilation need to be changed. The new configuration is called ‘MY_GYRE’.
 To compile 'MY_GYRE' run the following line (ifort_SPIRIT is the used arch file):
 
@@ -63,12 +61,12 @@ Now the configuration is compiled.
 
 ## 3. How to run NEMO 5.0.2
 
-- 1: Go in your configuration directory
+**Go in your configuration directory**
 ```
 cd cfgs/MY_GYRE/EXP00
 ```
 
-- 2: Update your iodef.xml for XIOS3:
+**Update your iodef.xml for XIOS3:**
 
 For the use of XIOS3, NEMO and XIOS3 needs to be run in detached mode.
 This means, in the file` iodef.xml` the following line needs to be:  
@@ -79,7 +77,7 @@ and the following line needs to be removed or commented:
 Last thing to do, is to copy the `xios_server.exe` into the folder of the configuration:    
 ` cp <YOURXIOSDIRECTORY>/bin/xios_server.exe ./ `
 
-- 3: Build your submition script:
+**Build your submition script:**
 
 Now you have everything you need to run your regional configuration.
 For this you need to build a script to run on HPC. We suggest you use 4 MPI core.
@@ -100,7 +98,7 @@ module purge
 module load <YOUR_MODULES>
 ```
 
-- 4: Run NEMO:
+**Run NEMO:**
 
 Now you can submit your job to run the simulation (command is computer dependent).
 
