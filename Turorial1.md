@@ -144,4 +144,8 @@ AAAAAAAA
 
 If your job encouters a problem, search for `E R R O R` in ocean.output to give you a clue as to what may be the problem.
 
-Once your job has completed, and your model output has been generated, you can do a quick check using ncview. Here below is an ncview of, for example, 
+Once your job has completed, and your model output has been generated, you can do a quick check using ncview. Here below is an ncview of, for example, the sea surface height `(sossheig)` in file `GYRE_5d_00010101_00021230_grid_T.nc`, at timestep 144:
+<img width="317" height="220" alt="Screenshot 2026-06-27 at 12 04 52 AM" src="https://github.com/user-attachments/assets/7878bcbb-a949-4bc4-a078-a06f6a1b3b51" />
+
+
+
