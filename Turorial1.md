@@ -85,6 +85,21 @@ and the following line needs to be removed or commented:
 Last thing to do, is to copy the `xios_server.exe` into the folder of the configuration:    
 ` cp <YOURXIOSDIRECTORY>/bin/xios_server.exe ./ `
 
+**Make sure all your your output is in a single file**
+
+By default, if you run on, for example 4 cores, your output will be split in 4. This is cumbersome for plotting. You can use the REBUILD_NEMO tool, but we suggest below an easier option for a "light" configuration like we have here for GYRE.
+
+Open file_def_nemo.xml
+
+and change this line:
+```
+    <file_definition type="multiple_file" name="@expname@_@freq@_@startdate@_@enddate@" sync_freq="10d" min_digits="4">
+```
+to this: 
+```
+    <file_definition type="one_file" name="@expname@_@freq@_@startdate@_@enddate@" sync_freq="10d" min_digits="4">
+```
+
 **Build your submition script:**
 
 Now you have everything you need to run your regional configuration.
@@ -113,3 +128,20 @@ Now you can submit your job to run the simulation (command is computer dependent
 Once terminated, you now have run your first NEMO simulation :).
 
 This is the simplest way to run NEMO with XIOS3.
+
+**Checking output and troubleshooting**
+
+If you job has completed coorectly, the end of your ocean.output file should look like this:
+
+```
+           iom_nf90_rp0123d, file: ./GYRE_00004320_restart_0000.nc, var: ssha wr
+ itten ok
+                     iom_close ~~~ close file: ./GYRE_00004320_restart_0000.nc o
+ k
+
+AAAAAAAA
+```
+
+If your job encouters a problem, search for `E R R O R` in ocean.output to give you a clue as to what may be the problem.
+
+Once your job has completed, and your model output has been generated, you can do a quick check using ncview. Here below is an ncview of, for example, 
