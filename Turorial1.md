@@ -9,11 +9,11 @@
 
 ## 2. How to compile NEMO
 
-### 2.1 Install and compile XIOS3
+### 2.1 Install and compile XIOS2
 
-Download the XIOS3 version with
+Download the XIOS2 version with
 
-`svn co http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS3/trunk <YOURXIOSDIRECTORY>`
+`svn co http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS2/trunk <YOURXIOSDIRECTORY>`
 
 Setup your arch files (one for the environment (.env), another for the compiler (.fcm) and a last one for the path (.path) ):
 - cd arch to see examples of what this file looks like e.g. arch/arch-ifort_MESOIPSL.*.
