@@ -24,7 +24,7 @@ Setup your arch files (one for the environment (.env), another for the compiler 
 
 cd .. back to your workdir
 
-XIOS3 is now compiled
+XIOS2 is now compiled
 
 ### 2.2 Install and compile NEMO version 5.0.2
 
@@ -73,17 +73,6 @@ Now the configuration is compiled.
 ```
 cd cfgs/GYRE_DEMO/EXP00
 ```
-
-**Update your iodef.xml for XIOS3:**
-
-For the use of XIOS3, NEMO and XIOS3 needs to be run in detached mode.
-This means, in the file` iodef.xml` the following line needs to be:  
-` <variable id="using_server"              type="bool">true</variable>`  
-and the following line needs to be removed or commented:  
-` <variable id="oasis_codes_id"            type="string" >oceanx</variable>`  
-
-Last thing to do, is to copy the `xios_server.exe` into the folder of the configuration:    
-` cp <YOURXIOSDIRECTORY>/bin/xios_server.exe ./ `
 
 **Make sure all your your output is in a single file**
 
