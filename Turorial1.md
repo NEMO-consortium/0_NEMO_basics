@@ -99,10 +99,10 @@ Suggestion: look at the supercomputer documentation or copy from a friend.
 Here is an exemple for a simple bash-script for running NEMO with 4 cpus and XIOS with 1 cpu: 
 ```
 #!/bin/sh
-#SBATCH --ntasks=5
+#SBATCH --ntasks=4
 #SBATCH --time 0:30:00
 
-mpirun -np 4 ./nemo -np 1 ./xios_server.exe
+mpirun -np 4 ./nemo
 ```
 
 The command `mpirun` is HPC dependent and can vary between machines. On some HPC, you may need to load your modules used to compile NEMO in the script itself by adding before starting NEMO:
