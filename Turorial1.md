@@ -63,7 +63,7 @@ If you use the auto build option, `MY_COMPUTER` is `auto`.
 Now, you can start compiling the configuration based on the reference configuration GYRE, as we use XIOS3 the keys in the compilation need to be changed. The new configuration is called ‘GYRE_DEMO’.
 To compile 'GYRE_DEMO' run the following line (ifort_SPIRIT is the used arch file):
 
-`./makenemo -m MY_COMPUTER -r GYRE_PISCES -n GYRE_DEMO -j 8 --add_key key_xios3`
+`./makenemo -m MY_COMPUTER -r GYRE_PISCES -n GYRE_DEMO -j 8`
 
 Now the configuration is compiled.
 
