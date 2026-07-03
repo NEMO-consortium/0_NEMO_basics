@@ -1,4 +1,6 @@
-# Tutorial 0 - Install, Compile and Run GYRE in version 5.0.2 with XIOS3
+# Tutorial 0 - Install, Compile and Run GYRE in version 5.0.2
+
+**Estimated time:** 15 minutes 
 
 ## 1. Prerequisities
 - Access to an HPC with at least 5 cores available
@@ -16,7 +18,7 @@ Download the XIOS2 version with
 `svn co http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS2/trunk <YOURXIOSDIRECTORY>`
 
 Setup your arch files (one for the environment (.env), another for the compiler (.fcm) and a last one for the path (.path) ):
-- cd arch to see examples of what this file looks like e.g. arch/arch-ifort_MESOIPSL.*.
+- `cd arch` to see examples of what these files look like e.g. arch/arch-ifort_MESOIPSL.*.
 - setup your arch files (`arch/arch-MY_COMPUTER.*`) depending of your environement, compiler and computer.
 - Then you compile XIOS (cd .. to `<YOURXIOSDIRECTORY>`) referring to your set of arch files:
 
