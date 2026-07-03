@@ -55,12 +55,13 @@ Add your arch file (`arch/arch-MY_COMPUTER.fcm`) under `<YOURNEMODIRECTORY>/arch
 ```
 cd arch/
 ./build_arch-auto.sh --xios_prefix <YOURXIOSDIRECTORY>
+cd ..
 ```
 
 If you use the auto build option, `MY_COMPUTER` is `auto`.
 
 **Compile NEMO:**
-Now, you can start compiling the configuration based on the reference configuration GYRE, as we use XIOS3 the keys in the compilation need to be changed. The new configuration is called ‘GYRE_DEMO’.
+Now, you can start compiling the configuration based on the reference configuration GYRE. The new configuration is called ‘GYRE_DEMO’.
 To compile 'GYRE_DEMO' run the following line (ifort_SPIRIT is the used arch file):
 
 `./makenemo -m MY_COMPUTER -r GYRE_PISCES -n GYRE_DEMO -j 8`
