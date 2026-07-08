@@ -73,8 +73,12 @@ Now the configuration is compiled.
 ## 3. How to run NEMO 5.0.2
 
 **Go in your configuration directory**
+
+Copy EXP00 to EXP01 and enter the EXP01 directory
+
 ```
-cd cfgs/GYRE_DEMO/EXP00
+cp cfgs/GYRE_DEMO/EXP00 cfgs/GYRE_DEMO/EXP01
+cd cfgs/GYRE_DEMO/EXP01
 ```
 
 **Make sure all your your output is in a single file**
