@@ -9,6 +9,14 @@
 - Knowledge to submit a script to the batch scheduler of your HPC
 - Knowledge on how to run a programme on multicores (at least 5) (srun, mpirun, ...)
 
+  For each demonstrator, you should clone the files to your local machine. To do so, you can find the http path to the git directory under the green button *<> Code*. Then do:
+  ```
+  cd ~
+  mkdir NEMO_demonstrators
+  cd NEMO_demonstrators
+  git clone PATH_TO_THE_DIRECTORY
+  ```
+
 ## 2. How to compile NEMO
 
 ### 2.1 Install and compile XIOS2
