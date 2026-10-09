@@ -1,2 +1,3 @@
-- In line with NEMO version 5.0.2: Tag link
-- In line with NEMO version 6.0  : Tag link
+- In line with NEMO version 5.0.2
+- Installation using already installed modules: [here](Tutorial1.md)
+- Installation by installing all dependencies: [here](Tutorial2.md)
