@@ -1,3 +1,3 @@
 - In line with NEMO version 5.0.2
-- Installation using already installed modules: [here](Tutorial1.md)
-- Installation by installing all dependencies: [here](Tutorial2.md)
+- Installation using already installed modules (adapted if using an HPC): [here](Tutorial1.md)
+- Installation by installing manually all dependencies (adapted if using a laptop): [here](Tutorial2.md)
