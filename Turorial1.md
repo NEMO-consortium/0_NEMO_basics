@@ -1,4 +1,4 @@
-# Tutorial 0 - Install, Compile and Run GYRE in version 5.0.2
+# Tutorial 1 - Install, Compile and Run GYRE in version 5.0.2
 
 **Estimated time:** 15 minutes 
 
